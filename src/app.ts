@@ -1,6 +1,6 @@
 require('dotenv').config();
 import express = require('express');
-const app = express();
+const app: express.Application = express();
 import chalk = require('chalk');
 import cors = require('cors');
 let port = process.env.PORT || 3000;

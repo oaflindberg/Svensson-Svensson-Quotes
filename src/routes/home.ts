@@ -1,9 +1,9 @@
 import express = require('express');
-const router = express.Router();
+const router: express.Router = express.Router();
 import path = require('path');
 import chalk = require('chalk');
 
-router.get('/', (req, res) => {
+router.get('/', (req: express.Request, res: express.Response) => {
   try {
     res.status(200).sendFile(path.join(__dirname + './../../views/index.html'));
   } catch (error) {
