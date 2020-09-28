@@ -9,7 +9,11 @@ const randomQuote = (arr: object[]) => {
 };
 
 router.get('/quote', (req, res) => {
-  res.send(randomQuote(quotes));
+  try {
+    res.send(randomQuote(quotes));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;
