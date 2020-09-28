@@ -1,6 +1,7 @@
+require('dotenv').config();
 import express = require('express');
 const app = express();
-let port: number = 3000;
+let port = process.env.PORT || 3000;
 
 const home = require('./routes/home');
 const quotes = require('./routes/quote');
