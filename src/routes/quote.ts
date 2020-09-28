@@ -10,7 +10,7 @@ const randomQuote = (arr: object[]) => {
 
 router.get('/quote', (req, res) => {
   try {
-    res.status(200).send(randomQuote(quotes));
+    res.send(randomQuote(quotes));
   } catch (error) {
     console.log(chalk.red(error));
   }
