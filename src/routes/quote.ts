@@ -1,7 +1,7 @@
 import express = require('express');
 const router = express.Router();
-
 const quotes: object[] = require('./../../data/data.json');
+import chalk = require('chalk');
 
 const randomQuote = (arr: object[]) => {
   let randomIndex = Math.floor(Math.random() * arr.length);
@@ -12,7 +12,7 @@ router.get('/quote', (req, res) => {
   try {
     res.send(randomQuote(quotes));
   } catch (error) {
-    console.log(error);
+    console.log(chalk.red(error));
   }
 });
 

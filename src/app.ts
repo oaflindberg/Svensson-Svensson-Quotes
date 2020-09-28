@@ -1,6 +1,7 @@
 require('dotenv').config();
 import express = require('express');
 const app = express();
+import chalk = require('chalk');
 let port = process.env.PORT || 3000;
 
 const home = require('./routes/home');
@@ -10,5 +11,5 @@ app.use(home);
 app.use(quotes);
 
 app.listen(port, () => {
-  console.log(`App listening on port http://localhost:${port}`);
+  console.log(chalk.blue(`App listening on port http://localhost:${port}`));
 });
