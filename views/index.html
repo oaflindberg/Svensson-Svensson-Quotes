@@ -22,6 +22,12 @@
     font-family: 'Fira Code', monospace;
   }
 
+  @supports (-webkit-touch-callout: none) {
+    body {
+      height: -webkit-fill-avaiable;
+    }
+  }
+
   .app {
     width: 90vw;
   }
