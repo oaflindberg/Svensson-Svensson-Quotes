@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Svensson Svensson REST</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="https://bit.ly/36fANLG" type="image/x-icon">
-</head>
-<style>
-  body {
-    max-height: 100vh;
-    min-height: 100vh;
-    background: #111216;
-    color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    box-sizing: border-box;
-    margin: 0;
-    font-size: 2.3vmax;
-    font-family: 'Fira Code', monospace;
-  }
-
-  .app {
-    height: 25vh;
-    width: 90vw;
-  }
-
-  @media (min-width: 1024px) {
-    .app {
-      height: 30vh;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svensson Svensson REST</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://bit.ly/36fANLG"
+      type="image/x-icon"
+    />
+  </head>
+  <style>
+    body {
+      max-height: 100vh;
+      min-height: 100vh;
+      background: #111216;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      box-sizing: border-box;
+      margin: 0;
+      font-size: 2.3vmax;
+      font-family: 'Fira Code', monospace;
     }
-  }
-</style>
 
-<body>
-  <div class="app"></div>
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-  <script>
-    const app = document.querySelector('.app')
-    const typewriter = new Typewriter(app)
+    .app {
+      height: 25vh;
+      width: 90vw;
+    }
 
-    typewriter
-      .typeString("fetch('http://svensson-svensson.herokuapp.com/quote')<br />")
-      .typeString(
-        "&nbsp;&nbsp;.then((res) => { <br /> &nbsp;&nbsp;&nbsp;&nbsp;return res.json(); <br /> &nbsp;&nbsp;}) <br />"
-      )
-      .typeString(
-        "&nbsp;&nbsp;.then((quote) => { <br /> &nbsp;&nbsp;&nbsp;&nbsp;console.log(quote); <br /> &nbsp;&nbsp;});"
-      )
-      .pauseFor(2500)
-      .start()
-  </script>
-</body>
+    @media (min-width: 1024px) {
+      .app {
+        height: 30vh;
+      }
+    }
+  </style>
 
+  <body>
+    <div class="app"></div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+      const app = document.querySelector('.app')
+      const typewriter = new Typewriter(app)
+
+      typewriter
+        .typeString(
+          "fetch('http://svensson-svensson.herokuapp.com/quote')<br />"
+        )
+        .typeString(
+          '&nbsp;&nbsp;.then((res) => { <br /> &nbsp;&nbsp;&nbsp;&nbsp;return res.json(); <br /> &nbsp;&nbsp;}) <br />'
+        )
+        .typeString(
+          '&nbsp;&nbsp;.then((quote) => { <br /> &nbsp;&nbsp;&nbsp;&nbsp;console.log(quote); <br /> &nbsp;&nbsp;});'
+        )
+        .pauseFor(2500)
+        .start()
+    </script>
+  </body>
 </html>

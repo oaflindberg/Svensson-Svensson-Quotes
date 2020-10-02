@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "build-ts": "tsc",
-    "test": "prettier --check */*.ts",
+    "test": "prettier --check */*.ts && prettier --check */*.html",
     "postinstall": "npm run build-ts",
     "start": "npm run serve",
     "serve": "node dist/app.js",
