@@ -2,8 +2,13 @@
 import express = require('express')
 const router: express.Router = express.Router()
 
+// Interface for quotes
+interface Quote {
+  quote: string
+}
+
 // Import quotes from datajson inside data folder
-const quotes: object[] = require('./../../data/data.json')
+const quotes: Quote[] = require('./../../data/data.json')
 
 // Import chalk (package to style console outputs)
 import chalk = require('chalk')
