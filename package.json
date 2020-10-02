@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "build-ts": "tsc",
+    "build-ts": "prettier --write */*.ts && prettier -write */*.html && tsc",
     "test": "prettier --check */*.ts && prettier --check */*.html",
     "postinstall": "npm run build-ts",
     "start": "npm run serve",
