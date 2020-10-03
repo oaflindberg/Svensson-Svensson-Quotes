@@ -14,8 +14,8 @@ const quotes: Quote[] = require('./../../data/data.json')
 import chalk = require('chalk')
 
 // Function to pick a random quote from the data.json file imported above
-const randomQuote = (arr: object[]) => {
-  let randomIndex = Math.floor(Math.random() * arr.length)
+const randomQuote = (arr: object[]): object => {
+  let randomIndex: number = Math.floor(Math.random() * arr.length)
   return arr[randomIndex]
 }
 

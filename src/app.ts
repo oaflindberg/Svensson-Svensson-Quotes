@@ -21,5 +21,5 @@ app.use(quotes)
 
 // Tell app to listen to port and console.log that the app is running
 app.listen(port, () => {
-  console.log(chalk.blue(`App listening on port http://localhost:${port}`))
+  console.log(chalk.blue(`App running on http://localhost:${port}`))
 })
